@@ -28,7 +28,17 @@ kotlin {
     }
 
     sourceSets {
+        androidMain.dependencies {
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
+        }
+
         commonMain.dependencies {
+            implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
+            api(libs.koin.core)
             //put your multiplatform dependencies here
         }
         commonTest.dependencies {
@@ -47,4 +57,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    viewBinding {
+        enable = true
+    }
 }
+//dependencies {
+//    implementation(libs.androidx.lifecycle.viewmodel.android)
+//}
+//dependencies {
+//    implementation(libs.androidx.lifecycle.viewmodel.android)
+//}
