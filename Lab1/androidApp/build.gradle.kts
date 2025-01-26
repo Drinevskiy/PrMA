@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "by.drinevskiy.converter.android"
+    namespace = "by.drinevskiy.converter.ui"
     compileSdk = 35
     defaultConfig {
-        applicationId = "by.drinevskiy.converter.android"
+        applicationId = "by.drinevskiy.converter.ui"
         minSdk = 30
         targetSdk = 35
         versionCode = 1
@@ -34,6 +34,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -42,5 +45,11 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.material)
+    implementation(libs.androidx.fragment)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.lifecycle.livedata)
+//    implementation(libs.androidx.)
     debugImplementation(libs.compose.ui.tooling)
 }

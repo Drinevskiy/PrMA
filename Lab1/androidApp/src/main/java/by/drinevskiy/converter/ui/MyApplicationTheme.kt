@@ -1,4 +1,4 @@
-package by.drinevskiy.converter.android
+package by.drinevskiy.converter.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
