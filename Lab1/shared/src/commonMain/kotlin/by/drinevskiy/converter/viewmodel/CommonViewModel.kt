@@ -333,6 +333,21 @@ class CommonViewModel : ViewModel(){
         changeUnit(unit, false)
     }
 
+    fun exchangeValues(){
+        val number1 = _state.value.number1
+        val number2 = _state.value.number2
+        val unit1 = _state.value.unit1
+        val unit2 = _state.value.unit2
+        _state.update {
+            it.copy(
+                number1 = number2,
+                number2 = number1,
+                unit1 = unit2,
+                unit2 = unit1
+            )
+        }
+    }
+
     fun clearAll(){
         _state.update { CommonUiState() }
     }

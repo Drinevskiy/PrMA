@@ -36,10 +36,8 @@
 
         <Spinner
             android:id="@+id/spinner1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:entries="@array/length_array" />
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="wrap_content"
@@ -73,10 +71,8 @@
 
         <Spinner
             android:id="@+id/spinner2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="2"
-            android:entries="@array/length_array" />
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
         <ImageButton
             android:id="@+id/imageButton4"
             android:layout_width="wrap_content"

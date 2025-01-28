@@ -11,11 +11,12 @@ android {
         applicationId = "by.drinevskiy.converter.android"
         minSdk = 30
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     packaging {
         resources {
@@ -28,11 +29,13 @@ android {
         create("free") {
             applicationIdSuffix = ".free"
             dimension = "pricing"
+            buildConfigField( "Boolean", "IS_PREMIUM", "false")
 //                  resValue("string","app_name","ProductFlavors-Free")
         }
         create("paid") {
             applicationIdSuffix = ".paid"
             dimension = "pricing"
+            buildConfigField( "Boolean", "IS_PREMIUM", "true")
             //       resValue("string", "app_name", "ProductFlavors-Paid")
         }
     }

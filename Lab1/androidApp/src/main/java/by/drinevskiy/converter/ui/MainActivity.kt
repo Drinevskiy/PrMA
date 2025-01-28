@@ -20,8 +20,10 @@ class MainActivity : AppCompatActivity() {
         window.setFlags(
             WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM,
             WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+
         binding = HomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().add(binding.frameLayout.id, LengthFragment()).commit()
             supportFragmentManager.beginTransaction().add(binding.keyboardLayout.id, KeyboardFragment()).commit()
@@ -60,18 +62,3 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(binding.frameLayout.id, fragment).commit()
     }
 }
-
-
-
-//@Composable
-//fun GreetingView(text: String) {
-//    Text(text = text)
-//}
-//
-//@Preview
-//@Composable
-//fun DefaultPreview() {
-//    MyApplicationTheme {
-//        GreetingView("Hello, Android!")
-//    }
-//}
